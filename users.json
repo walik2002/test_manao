@@ -1,14 +1,8 @@
 [
     {
         "login": "admin123",
-        "password": "3888c7db81fe1476d5164d4247eb853bbd3ecf96a0e5e7966b7597d9bfae72fd",
+        "password": "admin123",
         "email": "bel2002v@yandex.ru",
-        "name": "walentin"
-    },
-    {
-        "login": "admit1234",
-        "password": "14f69205a33888d062c981f15454db6f19898bea51ba969ebc76720203ed92d8",
-        "email": "b2002v@yandex.ru",
         "name": "walentin"
     }
 ]

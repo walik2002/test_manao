@@ -11,3 +11,8 @@
     font-size: 14px;
     display: block;
   }
+  #success-message{
+    color: green;
+    margin: 20px 0px 0px 0px;
+    font-size: 1.5em;
+  }

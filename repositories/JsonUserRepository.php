@@ -1,5 +1,7 @@
 <?php
+
     require_once ("UserRepository.php");
+    require_once '..'. DIRECTORY_SEPARATOR .'models'. DIRECTORY_SEPARATOR .'User.php';
     class JsonUserRepository implements UserRepository {
         private $filename;
       
@@ -47,12 +49,14 @@
             if (count($matchingUsers) === 0) {
                 return null;
             }
-          
+
+            $userData = reset($matchingUsers);
+
             $user = new User(
-                $matchingUsers[0]['login'],
-                $matchingUsers[0]['password'],
-                $matchingUsers[0]['email'],
-                $matchingUsers[0]['name']
+                $userData['login'],
+                $userData['password'],
+                $userData['email'],
+                $userData['name']
             );
           
             return $user;
@@ -73,7 +77,7 @@
             }
           
             // Update user data
-            $matchingUser = $matchingUsers[0];
+            $matchingUser = reset($matchingUsers);
             $matchingUser['password'] = $user->getPassword();
             $matchingUser['email'] = $user->getEmail();
             $matchingUser['name'] = $user->getName();

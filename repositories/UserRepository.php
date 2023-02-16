@@ -1,5 +1,5 @@
 <?php
-    require_once '..\\models\\User.php';
+    require_once '..'. DIRECTORY_SEPARATOR .'models'. DIRECTORY_SEPARATOR .'User.php';
     interface UserRepository {
         public function create(User $user): bool;
         public function read(string $login): ?User;

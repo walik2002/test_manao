@@ -14,7 +14,7 @@ class User {
       $salt = bin2hex(random_bytes(16));
       
       // Encrypt the password with the salt and MD5 hash
-      $this->password = $salt . md5($password . $salt);
+      $this->password = $password;
     }
   
     public function getLogin() {
@@ -38,7 +38,7 @@ class User {
       $salt = substr($this->password, 0, 32);
       
       // Calculate the hash of the input password with the salt
-      $hash = $salt . md5($password . $salt);
+      $hash = $password;
       
       // Compare the calculated hash with the stored password hash
       return $hash === $this->password;

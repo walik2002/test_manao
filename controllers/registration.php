@@ -1,6 +1,6 @@
 <?php
-require_once '..\\repositories\\JsonUserRepository.php';
-require_once '..\\models\\User.php';
+require_once '..'. DIRECTORY_SEPARATOR .'repositories'. DIRECTORY_SEPARATOR .'JsonUserRepository.php';
+require_once '..'. DIRECTORY_SEPARATOR .'models'. DIRECTORY_SEPARATOR .'User.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = $_POST["login"];
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo json_encode($errors);
             exit;
         } else {
-            $userRepository = new JsonUserRepository("..\\users.json");
+            $userRepository = new JsonUserRepository("..". DIRECTORY_SEPARATOR ."users.json");
             $user = new User($login, $password, $email, $name);
             $created = $userRepository->create($user);
 
@@ -30,13 +30,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 die("User with the same email or login already exists.");
             } else {
                 // Return success message as a JSON object
-                echo json_encode(array('success' => true));
+                echo '<h3 id = "success-message"> Registration successful! Please authorize!</h3>';
             }
         }
     } catch (Exception $e) {
         http_response_code(500);
         echo json_encode(array('error' => $e->getMessage()));
     }
+}else{
+    http_response_code(403);
 }
 
 function validate_user_data($login, $password, $confirm_password, $email, $name) {

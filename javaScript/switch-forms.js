@@ -13,3 +13,5 @@ document.getElementById('reg-btn').addEventListener('click', function() {
   DomManipulator.clearErrors();
   regForm.loadForm();
 });
+
+authForm.loadForm();
