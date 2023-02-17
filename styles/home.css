@@ -1,0 +1,72 @@
+nav {
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #4CAF50;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 30px 0;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* стили для футера */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

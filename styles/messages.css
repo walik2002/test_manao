@@ -1,0 +1,18 @@
+#error-message {
+    color: red;
+    font-size: 1.2em;
+    margin: auto;
+    margin-top: 1em;
+    max-width: 400px;
+  }
+  .error {
+    color: red;
+    margin: -15px 0px 0px 0px;
+    font-size: 14px;
+    display: block;
+  }
+  #success-message{
+    color: green;
+    margin: 20px 0px 0px 0px;
+    font-size: 1.5em;
+  }
