@@ -23,8 +23,10 @@ try {
         echo json_encode($errors);
         exit;
     } else {
+        $salt = bin2hex(random_bytes(16));
+        $encryptedPassword = $salt . sha1($password . $salt);
         $userRepository = new JsonUserRepository("..". DIRECTORY_SEPARATOR ."users.json");
-        $user = new User($login, $password, $email, $name);
+        $user = new User($login, $encryptedPassword, $email, $name);
         $created = $userRepository->create($user);
 
         if (!$created) {
