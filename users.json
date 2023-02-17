@@ -4,5 +4,11 @@
         "password": "admin123",
         "email": "bel2002v@yandex.ru",
         "name": "walentin"
+    },
+    {
+        "login": "admin12311",
+        "password": "admin123",
+        "email": "alex.braun.02@bk.ru",
+        "name": "walentin"
     }
 ]
