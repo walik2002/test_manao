@@ -22,8 +22,8 @@ class AjaxForm {
     const formData = new FormData(this.form);
     const domManipulator = new DomManipulator(this.form.id);
     domManipulator.clearErrors();
-
-    this.ajaxRequester.post(formData, (data, textStatus, jqXHR) => {
+    let ajaxRequester = new AjaxRequester(this.form.action)
+    ajaxRequester.post(formData, (data, textStatus, jqXHR) => {
       try {
         if (JSON.parse(data).redirect) {
           window.location.href = JSON.parse(data).redirect;
